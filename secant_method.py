@@ -21,9 +21,9 @@ def secant(a, b, e, N):
         b = c
         step = step + 1
 
-        # if step > N:
-        #     print('Not Convergent!')
-        #     break
+        if step > N:
+            print('Not Convergent!')
+            break
 
         condition = abs(f(c)) > e
     print('\n Required root is: %0.8f' % c)
