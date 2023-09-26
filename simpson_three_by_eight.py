@@ -1,37 +1,14 @@
-# def f(x):
-#     return 1/(1+x**2)
-
-
-# a = float(input("Lower Limit = "))
-# b = float(input("Upper Limit = "))
-# n = int(input("Number of strips = "))
-# h = (b-a)/n
-# k = 1
-# sum = 0
-
-# while (k < n):
-#     x = a + k*h
-#     if (k % 2 == 0):
-#         sum = sum + 2*f(x)
-#     else:
-#         sum = sum + 4*f(x)
-#     k = k + 1
-
-# Ia = (h/3)*(f(a)+f(b)+sum)
-# print(f"Approximate Value Is {Ia}")
-
-
-# Simpson's 1/3 Rule
+# Simpson's 3/8 Rule
 
 # Define function to integrate
 def f(x):
     return 1/(1 + x**2)
 
-# Implementing Simpson's 1/3
+# Implementing Simpson's 3/8
 
 
 def simpson13(a, b, n):
-    
+
     # calculating step size
     h = (b - a) / n
 
@@ -41,13 +18,13 @@ def simpson13(a, b, n):
     for i in range(1, n):
         k = a + i*h
 
-        if i % 2 == 0:
+        if i % 3 == 0:
             integration = integration + 2 * f(k)
         else:
-            integration = integration + 4 * f(k)
+            integration = integration + 3 * f(k)
 
     # Finding final integration value
-    integration = integration * h/3
+    integration = integration * 3 * h / 8
 
     # Display the result
     print(
