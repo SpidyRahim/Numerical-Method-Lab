@@ -1,6 +1,7 @@
 # Defining Function
 def f(x):
-    return - 26 + (85*x) - (91*x**2) + (44*x**3) - (8*x**4) + (x**5)
+    # return - 26 + (85*x) - (91*x**2) + (44*x**3) - (8*x**4) + (x**5)
+    return pow(x, 3) + 2*pow(x, 2)-x+8
 
 # Implementing Bisection Method
 
